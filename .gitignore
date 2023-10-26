@@ -1,0 +1,20 @@
+# idea
+*.iml
+.idea/
+*.ipr
+*.iws
+.vs/
+
+# osx
+*~
+.DS_Store
+gradle.properties
+
+# Windows:
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# My configurations:
+db.ini
+deploy_key_rsa

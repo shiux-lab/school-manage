@@ -37,24 +37,24 @@ if (empty($_SESSION['admin'][1])) {
                 </th>
                 <th class="col-1" @click="sort('id')"><i class="fas fa-sort-amount-down"></i> 编号 <i class="fas"
                                                                                                     :class="[isClick ? 'fa-angle-up' : 'fa-angle-down']"
-                                                                                                    v-if="type=='id'"></i>
+                                                                                                    v-if="type==='id'"></i>
                 </th>
                 <th class="col-2" @click="sort('name')"><i class="fas fa-user"></i> 姓名 <i class="fas"
                                                                                           :class="[isClick ? 'fa-angle-up' : 'fa-angle-down']"
-                                                                                          v-if="type=='name'"></i></th>
+                                                                                          v-if="type==='name'"></i></th>
                 <th class="col-1" @click="sort('sex')"><i class="fab fa-android"></i> 性别 <i class="fas"
                                                                                             :class="[isClick ? 'fa-angle-up' : 'fa-angle-down']"
-                                                                                            v-if="type=='sex'"></i></th>
+                                                                                            v-if="type==='sex'"></i></th>
                 <th class="col-2" @click="sort('tel')"><i class="fas fa-phone"></i> 电话 <i class="fas"
                                                                                           :class="[isClick ? 'fa-angle-up' : 'fa-angle-down']"
-                                                                                          v-if="type=='tel'"></i></th>
+                                                                                          v-if="type==='tel'"></i></th>
                 <th class="col-1" @click="sort('room')"><i class="fas fa-door-closed"></i> 宿舍 <i class="fas"
                                                                                                  :class="[isClick ? 'fa-angle-up' : 'fa-angle-down']"
-                                                                                                 v-if="type=='room'"></i>
+                                                                                                 v-if="type==='room'"></i>
                 </th>
                 <th class="col-3" @click="sort('major')"><i class="fas fa-project-diagram"></i> 专业 <i class="fas"
                                                                                                       :class="[isClick ? 'fa-angle-up' : 'fa-angle-down']"
-                                                                                                      v-if="type=='major'"></i>
+                                                                                                      v-if="type==='major'"></i>
                 </th>
                 <th class="col-1"><i class="fas fa-project-diagram"></i> 操作</th>
             </tr>
