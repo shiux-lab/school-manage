@@ -87,19 +87,24 @@ if (empty($_SESSION['admin'][1])) {
             <tr class="row row-cols-1" v-if="list.length > pages.pageNum">
                 <td>
                     <div class="btn-group">
-                        <button class="btn btn-outline-secondary btn-sm prev" v-if="pages.currentPage !== 1"
-                                @click="switchPage(pages.currentPage-1)"><i class="fas fa-caret-left"></i></button>
-                        <button class="btn btn-dark btn-sm" :class="[index === pages.currentPage ? 'disabled' : '']"
-                                v-for="index in pages.currentPage" @click="switchPage(index)">{{ index }}
-                        </button>
-                        <button class="btn btn-dark btn-sm disabled" v-if="pages.totalPage > pages.showPage"><i
-                                    class="fas fa-ellipsis-h"></i></button>
-                        <button class="btn btn-dark btn-sm" v-if="pages.totalPage !== pages.currentPage"
-                                @click="switchPage(pages.totalPage)">{{ pages.totalPage }}
-                        </button>
-                        <button class="btn btn-outline-secondary btn-sm next"
-                                v-if="pages.currentPage !== pages.totalPage" @click="switchPage(pages.currentPage+1)"><i
-                                    class="fas fa-caret-right"></i></button>
+                        <button class="btn btn-outline-secondary btn-sm prev"
+                            v-if="pages.currentPage !== 1"
+                            @click="switchPage(pages.currentPage-1)"><i class="fas fa-caret-left"></i></button>
+                        <button class="btn btn-dark btn-sm"
+                            :class="[index === pages.currentPage ? 'disabled' : '']"
+                            v-for="index in pages.currentPage"
+                            @click="switchPage(index)">{{ index }}</button>
+                        <button
+                            class="btn btn-dark btn-sm disabled"
+                            v-if="pages.totalPage > pages.showPage"><i class="fas fa-ellipsis-h"></i></button>
+                        <button
+                            class="btn btn-dark btn-sm"
+                            v-if="pages.totalPage !== pages.currentPage"
+                            @click="switchPage(pages.totalPage)">{{ pages.totalPage }}</button>
+                        <button
+                            class="btn btn-outline-secondary btn-sm next"
+                            v-if="pages.currentPage !== pages.totalPage"
+                            @click="switchPage(pages.currentPage+1)"><i class="fas fa-caret-right"></i></button>
                     </div>
                 </td>
             </tr>
@@ -107,11 +112,11 @@ if (empty($_SESSION['admin'][1])) {
                 <td>
                     <div class="btn-group">
                         <a class="btn btn-outline-dark" id="add" href="javascript:" @click="addBtn()"><i
-                                    class="fas fa-plus-circle"></i> 添加成员</a>
+                            class="fas fa-plus-circle"></i> 添加成员</a>
                         <a class="btn btn-outline-dark" id="delete" href="javascript:" v-if="list.length"
-                           @click="delBtn()"><i class="fas fa-trash-alt"></i> 删除成员</a>
+                            @click="delBtn()"><i class="fas fa-trash-alt"></i> 删除成员</a>
                         <a class="btn btn-dark" id="login" href="javascript:" @click="logoutBtn()"><i
-                                    class="fas fa-sign-out-alt"></i> 注销</a>
+                            class="fas fa-sign-out-alt"></i> 注销</a>
                     </div>
                 </td>
             </tr>

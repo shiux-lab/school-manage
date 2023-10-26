@@ -33,7 +33,8 @@ class Database
 //  查询所有记录
     public function select(string $conditions = null, string $type = 'id', string $orderType = 'asc', int $start = 0, int $num = null): array
     {
-        $sql = "select * from {$this->table}" . ($conditions ? " where {$conditions}" : '');
+        $sql = "select * from {$this->table}";
+        $sql .= ($conditions ? " where {$conditions}" : '');
         $sql .= " order by {$type} {$orderType}";
         $sql .= $num !== null ? ($start ? " limit {$start}, {$num}" : "limit {$num}") : '';
         $data = $this->conn->query($sql)->fetchAll();
