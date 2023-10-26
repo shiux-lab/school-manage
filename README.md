@@ -9,5 +9,5 @@
 
 ## 用户名
 
-- UserName: admin
-- Password: admin
+- 用户名: admin
+- 密码: admin
